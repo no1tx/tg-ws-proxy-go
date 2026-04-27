@@ -1,4 +1,5 @@
 tg-ws-proxy-go
+tgws-go
 logs/
 stats.json
 .DS_Store
