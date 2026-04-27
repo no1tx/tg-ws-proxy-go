@@ -1,0 +1,16 @@
+services:
+  tgws-go:
+    build:
+      context: .
+    image: tgws-go:local
+    container_name: tgws-go
+    restart: unless-stopped
+    ports:
+      - "16443:16443/tcp"
+    command:
+      - --host
+      - 0.0.0.0
+      - --port
+      - "16443"
+    volumes:
+      - ./logs:/var/log/tg-ws-proxy
